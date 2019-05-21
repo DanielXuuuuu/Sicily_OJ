@@ -12,7 +12,7 @@ int bonus[10005] = { 0 };
 bool topoSort(int n) {
 	for (int i = 0; i < n; i++) {
 		for(auto j : graph[i]) {
-				indegree[j]++;
+			indegree[j]++;
 		}
 	}
 
