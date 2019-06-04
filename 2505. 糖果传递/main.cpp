@@ -16,10 +16,10 @@ int main(){
         sum += candy[i];
     }
     avg = sum / num;
-    for(int i = 1; i <= num; i++){
-        c[i] = c[i - 1] + candy[i] - avg;
+    for(int i = 2; i <= num; i++){
+        c[i] = c[i - 1] + candy[i - 1] - avg;
     }
-    sort(c + 1, c + num + 1);
+    sort(c + 1, c + num);
     lli temp = c[num/2];
     for(int i = 1; i <= num; i++){
         ans += abs(c[i] - temp);
